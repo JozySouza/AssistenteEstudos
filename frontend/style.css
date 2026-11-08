@@ -1,0 +1,85 @@
+:root {
+  --tinta: #1b2a49;
+  --tinta-suave: #4a5a7a;
+  --papel: #fbfcfe;
+  --grade: #dfe6f1;
+  --marca-texto: #ffe066;
+  --erro: #a61e3c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  color: var(--tinta);
+  background-color: var(--papel);
+  /* papel quadriculado de caderno */
+  background-image:
+    linear-gradient(var(--grade) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grade) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+main { max-width: 640px; margin: 0 auto; padding: 48px 20px 64px; }
+
+h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+h2 { font-size: 1.1rem; margin: 0 0 8px; }
+.intro { margin: 0 0 28px; color: var(--tinta-suave); line-height: 1.5; }
+
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+
+textarea {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  padding: 12px 14px;
+  border: 2px solid var(--tinta);
+  border-radius: 4px;
+  background: #fff;
+  resize: vertical;
+}
+
+.barra { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+#contador { color: var(--tinta-suave); font-size: 0.9rem; }
+
+button { font: inherit; cursor: pointer; }
+
+#botao {
+  background: var(--tinta);
+  color: #fff;
+  border: 2px solid var(--tinta);
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-weight: 700;
+}
+#botao:disabled { opacity: 0.6; cursor: wait; }
+
+.exemplos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.exemplo {
+  background: #fff;
+  color: var(--tinta);
+  border: 1px solid var(--tinta-suave);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+}
+.exemplo:hover { background: var(--marca-texto); border-color: var(--tinta); }
+
+#resultado {
+  margin-top: 32px;
+  padding: 18px 20px;
+  background: #fff;
+  border-left: 8px solid var(--marca-texto);
+  box-shadow: 0 0 0 1px var(--grade);
+}
+#resposta { margin: 0; line-height: 1.65; white-space: pre-wrap; max-width: 70ch; }
+#resultado.erro { border-left-color: var(--erro); }
+#resultado.erro #resposta { color: var(--erro); }
+
+:focus-visible { outline: 3px solid #2f6fed; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  button { transition: background 0.15s; }
+}

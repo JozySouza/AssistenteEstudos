@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assistente de Estudos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Assistente de Estudos</h1>
+    <p class="intro">Escreva sua dúvida sobre a matéria e receba uma explicação curta e didática.</p>
+
+    <form id="formulario">
+      <label for="pergunta">Sua pergunta</label>
+      <textarea id="pergunta" maxlength="500" rows="4" placeholder="Ex.: Qual a diferença entre um array e uma lista encadeada?" required></textarea>
+      <div class="barra">
+        <span id="contador">0/500</span>
+        <button type="submit" id="botao">Perguntar</button>
+      </div>
+    </form>
+
+    <div class="exemplos" aria-label="Perguntas de exemplo">
+      <button type="button" class="exemplo">O que é uma API REST?</button>
+      <button type="button" class="exemplo">Explique recursão com um exemplo</button>
+      <button type="button" class="exemplo">Para que serve o Git?</button>
+    </div>
+
+    <section id="resultado" aria-live="polite" hidden>
+      <h2>Resposta</h2>
+      <p id="resposta"></p>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
