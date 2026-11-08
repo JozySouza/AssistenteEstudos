@@ -1,6 +1,6 @@
 # Assistente de Estudos com IA
 
-![CI](https://github.com/JozySouza/AssistenteEstudos/blob/main/.github/workflows/ci.yml)
+![CI](https://github.com/JozySouza/AssistenteEstudos/actions/workflows/ci.yml)
 
 Sistema de perguntas e respostas com IA generativa (**Google Gemini**). O estudante digita uma dúvida e recebe uma explicação curta e didática na tela.
 
